@@ -17,6 +17,6 @@ RUN npm install -g --unsafe-perm node-red
 
 # Node-Red自動起動設定
 RUN npm install -g pm2
-RUN pm2 start /usr/bin/node-red -- -u root
+RUN pm2 start node-red -- -u root
 RUN pm2 save
 RUN pm2 startup systemd -u root

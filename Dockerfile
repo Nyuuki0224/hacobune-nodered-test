@@ -16,4 +16,4 @@ RUN npm -v
 RUN npm install -g --unsafe-perm node-red
 
 # Node-Red起動
-RUN node-red -- -u root -p 1880
+RUN node-red -- -u root -p 1880 

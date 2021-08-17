@@ -7,9 +7,9 @@ LABEL description="Dockerfileのテスト、Node-REDをVer指定なしでイン�
 
 # 各種パッケージインストール(apt-get)
 RUN apt-get update && apt-get install -y \
+    tzdata \
     nodejs \
-    npm \
-    tzdata
+    npm
 
 # Node-REDインストール(NPM)
 RUN npm install -g --unsafe-perm node-red

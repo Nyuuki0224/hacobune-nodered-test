@@ -6,8 +6,8 @@ LABEL version="0.1.1"
 LABEL description="Dockerfileのテスト、Node-REDをVer指定なしでインストールする"
 
 # 各種パッケージインストール(apt-get)
-RUN apt-get update && apt-get install -y \
-    tzdata \
+RUN apt-get update && apt-get install -y tzdata 
+RUN apt-get install -y \    
     nodejs \
     npm
 

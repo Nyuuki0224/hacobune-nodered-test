@@ -1,18 +1,17 @@
-# OS指定～パッケージリストアップデート
-
+# OS指定
 FROM ubuntu:20.04
 
-LABEL version="0.1.0"
+# ラベル付与
+LABEL version="0.1.1"
 LABEL description="Dockerfileのテスト、Node-REDをVer指定なしでインストールする"
 
-RUN apt-get update
-RUN apt-get install -y tzdata
+# 各種パッケージインストール(apt-get)
+RUN apt-get update && apt-get install -y \
+    nodejs \
+    npm \
+    tzdata
 
-# Node.js,NPM,Node-REDインストール
-
-RUN apt-get install -y nodejs npm
-RUN node -v
-RUN npm -v
+# Node-REDインストール(NPM)
 RUN npm install -g --unsafe-perm node-red
 
 # Node-Red起動
